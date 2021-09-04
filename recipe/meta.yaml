@@ -1,5 +1,5 @@
 {% set name = "ConfigUpdater" %}
-{% set version = "2.0" %}
+{% set version = "3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a60447fb25e5cb5036cdd5761287ac5649135a49094bc8bd71d999417483441
+  sha256: 430d3da24b7905a780cbd170765c09f16a74bb175d07e6a7eff2d621914bbc91
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -40,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Parser like ConfigParser but for updating configuration files'
+  summary: Parser like ConfigParser but for updating configuration files
   description: |
     The sole purpose of ConfigUpdater is to easily update an INI config file
     with no changes to the original file except the intended ones. This means
