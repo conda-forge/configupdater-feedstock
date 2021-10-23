@@ -1,5 +1,5 @@
 {% set name = "ConfigUpdater" %}
-{% set version = "3.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 430d3da24b7905a780cbd170765c09f16a74bb175d07e6a7eff2d621914bbc91
+  sha256: 372a6a6ef598a118ec17927bec9486a7d36f44ccd3e641e879e0bf998b70924e
 
 build:
   noarch: python
