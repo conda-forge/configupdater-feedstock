@@ -1,17 +1,17 @@
 {% set name = "ConfigUpdater" %}
-{% set version = "3.2" %}
+{% set version = "4.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9fdac53831c1b062929bf398b649b87ca30e7f1a735f3fbf482072804106306b
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: 5e56383fd05367f4204a9d46bf20b1bbb88b45257cb933938ff6f87bc17057e7
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
